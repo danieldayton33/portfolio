@@ -1,23 +1,40 @@
 {
-  "name": "dd-web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@next/font": "13.1.6",
-    "@types/node": "18.13.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.10",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.5"
-  }
+    "name": "dd-web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@next/font": "13.1.6",
+        "@radix-ui/react-dialog": "^1.0.2",
+        "@radix-ui/react-dropdown-menu": "^2.0.2",
+        "@types/node": "18.13.0",
+        "@types/nodemailer": "^6.4.7",
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.10",
+        "classnames": "^2.3.2",
+        "eslint": "8.34.0",
+        "eslint-config-next": "13.1.6",
+        "jotai": "^2.0.1",
+        "next": "13.1.6",
+        "nodemailer": "^6.9.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-feather": "^2.0.10",
+        "react-hook-form": "^7.43.1",
+        "styled-components": "^5.3.6",
+        "typescript": "4.9.5"
+    },
+    "devDependencies": {
+        "@carimus/prettier-config": "^1.1.0",
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "prettier": "^2.8.4",
+        "tailwindcss": "^3.2.6"
+    },
+    "prettier": "@carimus/prettier-config"
 }
