@@ -8,7 +8,7 @@ import Contact from '@components/Contact';
 const Header: FunctionComponent = () => {
     const [hoverRef, isHovered] = useHover();
     return (
-        <div className="grid lg:grid-cols-3 gap-4 py-24 justify-center">
+        <div className="grid lg:grid-cols-3 gap-4 pt-24 lg:py-24 justify-center">
             <div
                 //  @ts-ignore
                 ref={hoverRef}
