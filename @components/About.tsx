@@ -19,7 +19,7 @@ const About: FunctionComponent = () => {
         scrollToProjects();
     };
     return (
-        <div className="flex flex-col py-16">
+        <div className="flex flex-col py-24">
             <div>
                 <h2 className="text-4xl mb-6 font-ubuntuBold">About</h2>
                 <p className="mb-4">
@@ -29,22 +29,58 @@ const About: FunctionComponent = () => {
                         href="https://carimus.com"
                         target={'_blank'}
                         rel="noreferrer"
+                        className="font-ubuntuBold text-quinary hover:text-primary"
                     >
                         Carimus
                     </a>
-                    . Carimus is an amazing company to work for. We have an
-                    extremely talented team of designers and developers. We are
-                    always learning and growing as a team. I&apos;m very excited
-                    to be a part of such a great team.
+                    . This is a small portfolio site and playground for me to
+                    try out new tech. For this project I&apos;ve used:
+                </p>
+                <ul className="list-disc list-inside mb-4">
+                    <li>
+                        Next.js deployed to Vercel - I&apos;m trying out the{' '}
+                        <span className="font-bold font-mono">app</span>{' '}
+                        directory and React Server Components
+                    </li>
+                    <li>Tailwind and Styled Components for Styles</li>
+                    <li>Joitai for light state management</li>
+                    <li>
+                        And a few other packages: radix-ui, react-hook-form,
+                        classnames, etc. You can check out the source code{' '}
+                        <a
+                            href="https://github.com/danieldayton33/portfolio"
+                            target={'_blank'}
+                            rel="noreferrer"
+                            className="font-ubuntuBold text-quinary hover:text-primary"
+                        >
+                            Here
+                        </a>{' '}
+                    </li>
+                </ul>
+                <p className="mb-4">
+                    I trasitioned into software developmen in 2018 after working
+                    as a farmer for over 10 years. For many, this transition may
+                    seem pretty drastic, but I&apos;ve found a profession that
+                    keeps me engaged every day. I was foucsed predominatly on
+                    frontend development during the first few years of my
+                    career, but have been working on full stack projects for the
+                    last few years.
                 </p>
                 <p>
-                    I trasitioned into software development after working as a
-                    farmer over 10 years. For many, this transition may seem
-                    pretty drastic, but I&apos;ve found a passion for software
-                    development that I never knew I had. I love the problem
-                    solving aspect of software development. I also love the fact
-                    that there is always something new to learn. I&apos;m always
-                    excited to learn new technologies and improve my skills.
+                    A lot of the projects on this site are part of my work at{' '}
+                    <a
+                        href="https://carimus.com"
+                        target={'_blank'}
+                        rel="noreferrer"
+                        className="font-ubuntuBold text-quinary hover:text-primary"
+                    >
+                        Carimus
+                    </a>
+                    , where I work with a extremely talented team of designers
+                    and developers. I&apos;ve categorized those projects as
+                    &quot;Work&quot; and the others as &quot;Personal&quot;, and
+                    indicated my role on the project. As part of my role
+                    I&apos;m a team lead and manage a team of 3 developers.
                 </p>
                 <h2 className="text-4xl my-6 font-ubuntuBold">Skills</h2>
                 <ul className="grid grid-cols-2 gap-x-6">

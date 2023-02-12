@@ -1,7 +1,7 @@
 import { Project } from 'dd-types';
 
 export const CATEGORIES = [
-    'Carimus',
+    'Work',
     'Personal',
     'Open Source,',
     'Headless WordPress',
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
         description:
             'A website for a non-profit organization that helps people connect with nature.',
         url: 'https://wildforall.org',
-        categories: ['Carimus', 'Headless WordPress'],
+        categories: ['Work', 'Headless WordPress'],
         technologies: [
             'React',
             'TypeScript',
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
         name: 'Carimus Website',
         description: 'A website for a software development company.',
         url: 'https://carimus.com',
-        categories: ['Carimus', 'Headless WordPress'],
+        categories: ['Work', 'Headless WordPress'],
         technologies: [
             'React',
             'TypeScript',
