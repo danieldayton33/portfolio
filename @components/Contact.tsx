@@ -96,7 +96,7 @@ const Contact: FunctionComponent = () => {
     };
     return (
         <div className="flex flex-col w-full relative">
-            <h3 className="text-3xl mt-12 font-ubuntuBold">Contact</h3>
+            <h3 className="text-3xl mt-12 mb-4 font-ubuntuBold">Contact</h3>
             {isLoading && (
                 <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex justify-center items-center animate-pulse" />
             )}
