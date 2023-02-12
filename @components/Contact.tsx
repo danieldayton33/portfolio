@@ -62,7 +62,6 @@ const Contact: FunctionComponent = () => {
         formState: { errors },
     } = useForm<FormValues>({ resolver });
     const handleFormSubmit = async (data: FormValues) => {
-        console.log(data);
         setIsLoading(true);
         await fetch('/api/contact', {
             method: 'POST',
@@ -96,8 +95,11 @@ const Contact: FunctionComponent = () => {
             });
     };
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full relative">
             <h3 className="text-3xl mt-12 font-ubuntuBold">Contact</h3>
+            {isLoading && (
+                <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex justify-center items-center animate-pulse" />
+            )}
             {
                 // Show message if there is one
                 message ? (
@@ -161,9 +163,14 @@ const Contact: FunctionComponent = () => {
                                     <div>{errors.message.message}</div>
                                 )}
                             </div>
-                            <button className="btn" type="submit">
-                                Submit
-                            </button>
+                            <div>
+                                <button
+                                    className="btn btn-primary"
+                                    type="submit"
+                                >
+                                    Submit
+                                </button>
+                            </div>
                         </form>
                     </div>
                 )
