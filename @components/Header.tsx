@@ -9,15 +9,15 @@ const Header: FunctionComponent = () => {
     const [hoverRef, isHovered] = useHover();
     return (
         <div className="grid lg:grid-cols-3 gap-4 py-24 justify-center">
-            {/* @ts-ignore */}
             <div
+                //  @ts-ignore
                 ref={hoverRef}
                 className="relative w-48 h-48 rounded-full bg-primary shadow-2xl"
             >
                 <Image
                     src="/dd.jpeg"
                     alt="Daniel Dayton"
-                    fill="true"
+                    fill={true}
                     style={{ borderRadius: '50%', objectFit: 'cover' }}
                 />
             </div>
