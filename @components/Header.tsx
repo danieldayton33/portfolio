@@ -3,32 +3,39 @@ import { FunctionComponent } from 'react';
 import { useHover } from 'utils/hooks';
 import classNames from 'classnames';
 import Image from 'next/image';
+import Contact from '@components/Contact';
 
 const Header: FunctionComponent = () => {
     const [hoverRef, isHovered] = useHover();
     return (
-        <div className="flex flex-col items-center justify-center py-16">
+        <div className="grid lg:grid-cols-3 gap-4 py-24 justify-center">
             {/* @ts-ignore */}
-            <div ref={hoverRef}>
+            <div
+                ref={hoverRef}
+                className="relative w-48 h-48 rounded-full bg-primary shadow-2xl"
+            >
                 <Image
                     src="/dd.jpeg"
                     alt="Daniel Dayton"
-                    width={250}
-                    height={300}
-                    className="rounded-full shadow-2xl hover:scale-105 transition-all duration-500"
+                    fill="true"
+                    style={{ borderRadius: '50%', objectFit: 'cover' }}
                 />
             </div>
-
-            <h1
-                className={classNames({
-                    'text-6xl mt-12 transition-all duration-500 font-ubuntuBold':
-                        true,
-                    'animate-bounce': isHovered,
-                })}
-            >
-                Daniel Dayton
-            </h1>
-            <p className="text-2xl mt-4">Software Developer</p>
+            <div className="lg:col-span-2">
+                <h1
+                    className={classNames({
+                        'text-8xl transition-all duration-500 font-ubuntuBold':
+                            true,
+                        'animate-bounce': isHovered,
+                    })}
+                >
+                    Daniel Dayton
+                </h1>
+                <p className="text-2xl mt-4 pl-2">Software Developer</p>
+            </div>
+            <div className="lg:col-span-3">
+                <Contact />
+            </div>
         </div>
     );
 };

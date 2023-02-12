@@ -19,7 +19,7 @@ const About: FunctionComponent = () => {
         scrollToProjects();
     };
     return (
-        <div className="flex flex-col py-32 justify-center">
+        <div className="flex flex-col py-24">
             <div>
                 <h2 className="text-4xl mb-6 font-ubuntuBold">About</h2>
                 <p className="mb-4">

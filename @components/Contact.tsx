@@ -96,14 +96,14 @@ const Contact: FunctionComponent = () => {
             });
     };
     return (
-        <div className="flex flex-col items-center justify-center py-16">
-            <h3 className="text-6xl mt-12 font-ubuntuBold">Contact</h3>
+        <div className="flex flex-col w-full">
+            <h3 className="text-3xl mt-12 font-ubuntuBold">Contact</h3>
             {
                 // Show message if there is one
                 message ? (
                     <div>{message}</div>
                 ) : (
-                    <div className="w-full max-w-xs">
+                    <div className="w-full max-w-xl">
                         <form
                             className="flex flex-col justify-center"
                             onSubmit={handleSubmit((data) =>
