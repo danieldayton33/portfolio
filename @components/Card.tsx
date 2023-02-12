@@ -15,7 +15,6 @@ const StyledCard = styled.div`
     h3 {
         text-transform: uppercase;
         font-size: clamp(1rem, 5vw, 1.25rem);
-        margin: 2rem 0 1rem;
         letter-spacing: 0.2rem;
     }
     border-radius: 0.5rem;
@@ -46,10 +45,10 @@ const Card: FunctionComponent<Project> = ({
             </div>
             <h2 className="font-ubuntuBold">{name}</h2>
             <p>{description}</p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
                 {categories && categories.length > 0 && (
                     <div>
-                        <h3 className={'font-ubuntuBold'}>Categories</h3>
+                        <h3 className={'font-ubuntuBold mt-4'}>Categories</h3>
                         <dl>
                             {categories.map((category, i) => (
                                 <dd key={`category-${i}`}>{category}</dd>
@@ -59,7 +58,7 @@ const Card: FunctionComponent<Project> = ({
                 )}
                 {technologies && technologies.length > 0 && (
                     <div>
-                        <h3 className={'font-ubuntuBold'}>Technologies</h3>
+                        <h3 className={'font-ubuntuBold mt-4'}>Technologies</h3>
                         <dl>
                             {technologies.map((tech, i) => (
                                 <dd key={`tech-${i}`}>{tech}</dd>
@@ -68,7 +67,7 @@ const Card: FunctionComponent<Project> = ({
                     </div>
                 )}
             </div>
-            <div className="mt-8">
+            <div className="mt-6 lg:mt-8">
                 <a
                     href={url}
                     target="_blank"
