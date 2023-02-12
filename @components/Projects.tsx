@@ -29,9 +29,9 @@ const Projects: FunctionComponent = () => {
 
     return (
         <div className="py-32">
-            <h2 className="text-4xl mb-6 font-ubuntuBold">Projects</h2>
-            <div className="grid grid-cols-10 gap-12">
-                <StyledFilters className="col-span-3 relative flex flex-col">
+            <h2 className="text-4xl mb-4 font-ubuntuBold">Projects</h2>
+            <div className="grid lg:grid-cols-10 gap-12">
+                <StyledFilters className="lg:col-span-2  relative flex flex-col">
                     <h3 className="font-ubuntuBold text-2xl mb-4">
                         Filter by:
                     </h3>
@@ -55,11 +55,11 @@ const Projects: FunctionComponent = () => {
                         );
                     })}
                 </StyledFilters>
-                <div className="col-span-7">
+                <div className="lg:col-span-8">
                     <div
                         className={classNames({
                             'grid grid-cols-1 h-full': true,
-                            'md:grid-cols-2  gap-12':
+                            'lg:grid-cols-2  gap-12':
                                 filteredProjects.length > 0,
                         })}
                     >
