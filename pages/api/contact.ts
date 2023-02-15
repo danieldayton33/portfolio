@@ -3,13 +3,11 @@ import RouteHandler from '@/utils/route-handler';
 export default RouteHandler({
     POST: async (request, response) => {
         const { name, email, message } = request.body;
-        console.log(name, email, message);
         if (!name || !email || !message) {
             return response.status(400).send('Missing required fields');
         }
         const nodemailer = require('nodemailer');
         const { createTransport } = nodemailer;
-        console.log(process.env.GMAIL_USER_NAME, process.env.GMAIL_PASSWORD);
         const transporter = createTransport({
             service: 'gmail',
             auth: {
@@ -18,7 +16,7 @@ export default RouteHandler({
             },
         });
         const data = {
-            from: email,
+            from: process.env.GMAIL_USER_NAME,
             to: process.env.GMAIL_USER_NAME,
             subject: `Message from ${name}`,
             text: `Received message from ${name} (${email}):\n\n${message}`,
