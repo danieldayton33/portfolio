@@ -13,7 +13,6 @@ import classNames from 'classnames';
 const Projects: FunctionComponent = () => {
     const [filter, setFilter] = useAtom(filterAtom);
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    console.log('filter', filter);
 
     useEffect(() => {
         if (!filter) return setFilteredProjects(projects);
@@ -29,7 +28,7 @@ const Projects: FunctionComponent = () => {
 
     return (
         <div className="py-32">
-            <h2 className="text-4xl mb-4 font-ubuntuBold">Projects</h2>
+            <h2 className="text-4xl mb-4 font-ubuntuBold banner">Projects</h2>
             <div className="grid lg:grid-cols-10 gap-12">
                 <StyledFilters className="lg:col-span-2  relative flex flex-col">
                     <h3 className="font-ubuntuBold text-2xl mb-4">

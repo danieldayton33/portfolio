@@ -1,0 +1,24 @@
+.banner {
+    position: relative;
+    width: fit-content;
+    color: #ffffff;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        height: 125%;
+        width: calc(100% + 3rem);
+        transform: skew(5deg, 1deg);
+        background: var(--color-primary);
+        top: -10%;
+        left: -1.5rem;
+        z-index: -1;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    }
+    &.light {
+        color: var(--color-quinary);
+        &:before {
+            background: var(--color-secondary);
+        }
+    }
+}

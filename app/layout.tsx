@@ -1,4 +1,5 @@
 import './globals.css';
+import 'styles/index.scss';
 import { ubuntuNormal, ubuntuBold } from '@/utils/fonts';
 import Nav from '@components/Nav';
 
