@@ -27,6 +27,7 @@ export default RouteHandler({
             if (error) {
                 console.log(error);
                 error = error;
+                throw new Error(error);
             } else {
                 console.log('Email sent: ' + info.response);
                 info = info;

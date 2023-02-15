@@ -19,19 +19,6 @@ const StyledCard = styled.div`
         z-index: 1;
         width: fit-content;
         margin-bottom: 3rem;
-        &:before {
-            content: '';
-            position: absolute;
-            height: 125%;
-            width: calc(100% + 3rem);
-            transform: skew(5deg, 1deg);
-
-            background: var(--color-quaternary);
-            top: -10%;
-            left: -1.5rem;
-            z-index: -1;
-            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-        }
     }
     h3 {
         text-transform: uppercase;
@@ -52,7 +39,7 @@ const StyledCard = styled.div`
     .details {
         background: var(--color-quaternary);
         color: var(--color-quinary);
-        padding: 4rem;
+        padding: 2rem 4rem;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -119,7 +106,7 @@ const Card: FunctionComponent<Project> = ({
                     />
                 )}
             </div>
-            <h2 className="font-ubuntuBold">{name}</h2>
+            <h2 className="font-ubuntuBold banner">{name}</h2>
             <p>{description}</p>
             <div
                 className={classNames({
@@ -163,18 +150,18 @@ const Card: FunctionComponent<Project> = ({
                 </div>
             </div>
 
-            <div className="mt-6 lg:mt-8 flex justify-between button-wrap">
+            <div className="mt-6 lg:mt-8 flex justify-between button-wrap flex-col md:flex-row">
                 <a
                     href={url}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-primary"
+                    className="btn btn-primary text-center mt-2"
                     title={`View ${name} in a new tab`}
                 >
                     See Project
                 </a>
                 <button
-                    className="btn btn-primary show-details"
+                    className="btn btn-primary show-details mt-2"
                     onClick={() => setShowDetails(!showDetails)}
                     title={`Show ${
                         showDetails ? 'Less' : 'More'
