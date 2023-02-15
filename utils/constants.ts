@@ -49,6 +49,7 @@ export const PROJECTS: Project[] = [
             'Next.js',
         ],
         image: '/wild-for-all.png',
+        contribution: 'Lead Developer working with a outside design team.',
     },
     {
         name: 'Jillian Bondarchuk Website',
@@ -64,6 +65,8 @@ export const PROJECTS: Project[] = [
             'Express',
         ],
         image: '/jillian-bondarchuk-website.png',
+        contribution:
+            'Built for a friend. Site has not been fully launched yet.',
     },
     {
         name: 'Carimus Website',
@@ -78,5 +81,7 @@ export const PROJECTS: Project[] = [
             'Next.js',
         ],
         image: '/carimus-website.png',
+        contribution:
+            'About 50% of the code on this one. This was our first Headless WordPress site. I did the rocket animation /what-we-do.',
     },
 ];

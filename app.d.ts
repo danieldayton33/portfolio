@@ -6,5 +6,6 @@ declare module 'dd-types' {
         categories: string[];
         technologies: string[];
         image?: string;
+        contribution?: string;
     }
 }
