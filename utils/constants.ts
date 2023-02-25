@@ -22,13 +22,9 @@ export const TECHNOLOGIES = [
     'Docker',
     'AWS',
     'PostgreSQL',
-    'Sequelize',
     'PHP',
     'Laravel',
     'MySQL',
-    'HTML',
-    'CSS',
-    'JavaScript',
     'DevOps',
     'Git',
     'CI/CD',
@@ -47,6 +43,9 @@ export const PROJECTS: Project[] = [
             'WordPress',
             'GraphQL',
             'Next.js',
+            'Sass',
+            'PHP',
+            'MySQL',
         ],
         image: '/wild-for-all.png',
         contribution: 'Lead Developer working with a outside design team.',
@@ -83,5 +82,24 @@ export const PROJECTS: Project[] = [
         image: '/carimus-website.png',
         contribution:
             'About 50% of the code on this one. This was our first Headless WordPress site. I did the rocket animation /what-we-do.',
+    },
+    {
+        name: 'Carimus Portal',
+        description:
+            'A portal for a software development company. At this point it is for internal use only. Current functionality includes: synching deals with Pipedrive, user managment, quarter revenue estimation.',
+        url: 'https://carimus-dashboard.vercel.app/',
+        categories: ['Work'],
+        technologies: [
+            'React',
+            'TypeScript',
+            'Node.js',
+            'Express',
+            'PostgreSQL',
+            'Docker',
+            'Next.js',
+        ],
+        image: '/carimus-portal.png',
+        contribution:
+            'Lead Developer. Leveraged next-auth for authentication, prisma for ORM, react-able for tables, and tailwind for styles.',
     },
 ];
