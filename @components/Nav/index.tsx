@@ -11,7 +11,14 @@ const Nav: FunctionComponent = () => {
         <nav className="bg-primary">
             <div className="container mx-auto">
                 <div className="flex items-center justify-between h-16">
-                    <div></div>
+                    <div>
+                        <Link
+                            href="/"
+                            className="text-2xl font-bold text-white font-ubuntuBold leading-loose hover:text-quaternary"
+                        >
+                            DD
+                        </Link>
+                    </div>
                     <div className="flex items-center">
                         <a
                             href="https://www.linkedin.com/in/daniel-dayton-58a97121/"

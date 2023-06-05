@@ -7,5 +7,6 @@ declare module 'dd-types' {
         technologies: string[];
         image?: string;
         contribution?: string;
+        openInNewTab?: boolean;
     }
 }
