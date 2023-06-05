@@ -19,3 +19,6 @@
 .btn-primary {
     @apply bg-quinary hover:bg-secondary;
 }
+.btn-secondary {
+    @apply bg-quaternary hover:bg-primary;
+}

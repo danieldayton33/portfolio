@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
+import Link from 'next/link';
 const StyledCard = styled.div`
     padding: 2rem;
     display: flex;
@@ -89,6 +90,7 @@ const Card: FunctionComponent<Project> = ({
     technologies,
     image,
     contribution,
+    openInNewTab = true,
 }) => {
     const [showDetails, setShowDetails] = useState(false);
     return (
@@ -151,15 +153,26 @@ const Card: FunctionComponent<Project> = ({
             </div>
 
             <div className="mt-6 lg:mt-8 flex justify-between button-wrap flex-col md:flex-row">
-                <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary text-center mt-2"
-                    title={`View ${name} in a new tab`}
-                >
-                    See Project
-                </a>
+                {openInNewTab ? (
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-primary text-center mt-2"
+                        title={`View ${name} in a new tab`}
+                    >
+                        See Project
+                    </a>
+                ) : (
+                    <Link
+                        href={url}
+                        title={`View ${name} in a new tab`}
+                        className="btn btn-primary text-center mt-2"
+                    >
+                        See Project
+                    </Link>
+                )}
+
                 <button
                     className="btn btn-primary show-details mt-2"
                     onClick={() => setShowDetails(!showDetails)}

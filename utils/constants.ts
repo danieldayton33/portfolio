@@ -32,6 +32,17 @@ export const TECHNOLOGIES = [
 
 export const PROJECTS: Project[] = [
     {
+        name: "Shiloh's Birthday",
+        description: 'A website for my daughter.',
+        url: '/shiday',
+        categories: ['Personal'],
+        technologies: ['React', 'TypeScript', 'Next.js'],
+        image: '/shidays-birthday.png',
+        contribution:
+            'Simple App that authenticates with Spotify, allows the user to select a playlist, and time contractions. Built for my daughter.',
+        openInNewTab: false,
+    },
+    {
         name: 'Wild For All',
         description:
             'A website for a non-profit organization that helps people connect with nature.',

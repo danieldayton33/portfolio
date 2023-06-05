@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
-type HttpHandler = (request: NextApiRequest, response: NextApiResponse) => void;
+type HttpHandler = (request: Request) => void;
 
 interface RouteHandlerParams {
     GET?: HttpHandler;
@@ -11,15 +12,15 @@ interface RouteHandlerParams {
 }
 
 const RouteHandler = (handlers: RouteHandlerParams) => {
-    return async (request: NextApiRequest, response: NextApiResponse) => {
+    return async (request: Request) => {
         const method = request.method as HttpMethod;
         const handler = handlers[method];
 
         if (!handler) {
-            return response.status(405).send('Method not allowed');
+            return NextResponse.json('Method not allowed');
         }
 
-        return await handler!(request, response);
+        return handler(request);
     };
 };
 
