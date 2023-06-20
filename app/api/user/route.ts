@@ -45,6 +45,33 @@ const handler = RouteHandler({
                 return NextResponse.json(err);
             });
     },
+    PUT: async (req) => {
+        const session = await getServerSession();
+        if (!session) {
+            return NextResponse.json({ error: 'Unauthorized' });
+        }
+        const reqBody = await req.json();
+        console.log(reqBody);
+        const { id, name } = reqBody;
+        if (!id) {
+            return NextResponse.json({ error: 'Bad Request' });
+        }
+        return prisma.user
+            .update({
+                where: {
+                    id: +id,
+                },
+                data: {
+                    name: name,
+                },
+            })
+            .then((user) => {
+                return NextResponse.json(user);
+            })
+            .catch((err) => {
+                return NextResponse.json(err);
+            });
+    },
 });
 
-export { handler as GET };
+export { handler as GET, handler as PUT };

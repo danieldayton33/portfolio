@@ -48,10 +48,23 @@ const PlayListIframe: FunctionComponent<{
             toast.error('Something went wrong');
         },
         onSuccess: (data) => {
+            const { error } = data;
+            if (error) {
+                console.log(error);
+                toast.error('Something went wrong');
+                return;
+            }
             toast.success('Successfully updated playlist');
-            queryClient.invalidateQueries({
-                queryKey: ['birth', params.id],
-            });
+            queryClient
+                .invalidateQueries({
+                    queryKey: ['birth', params.id],
+                })
+                .then(() => {
+                    console.log('Invalidated birth query');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         },
     });
 
