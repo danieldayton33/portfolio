@@ -32,3 +32,8 @@ Simple Portolfio Website. Messing around with `/app` in Next 13. Trying out `pnp
 
 -   [ ] More Projects
 -   [ ] GSAP Animations
+
+## TODO
+-  [ ] Add handler for authenticated endpoints (need to be drier)
+-  [ ] Error boundaries
+-  [ ] Add tests
