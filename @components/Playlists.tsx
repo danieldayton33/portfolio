@@ -9,6 +9,7 @@ import PlayListIframe from '@/@components/PlayListIframe';
 import { StyleSheetManager } from 'styled-components';
 import classNames from 'classnames';
 import { useQuery } from '@tanstack/react-query';
+import { BirthWithUser } from '@/app/shiday/@births/[id]/page';
 
 const fetchSpotifyPlaylists = async (accessToken: string) => {
     const response = await fetch(
@@ -22,7 +23,7 @@ const fetchSpotifyPlaylists = async (accessToken: string) => {
     return await response.json();
 };
 
-const fetchBirth = async (id: string) => {
+export const fetchBirth = async (id: string): Promise<BirthWithUser> => {
     const response = await fetch(`/api/birth?id=${id}`);
     return await response.json();
 };

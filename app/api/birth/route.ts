@@ -35,6 +35,7 @@ const handler = RouteHandler({
                 },
                 include: {
                     user: true,
+                    contractions: true,
                 },
             })
             .then((birth) => {
@@ -110,7 +111,6 @@ const handler = RouteHandler({
             return NextResponse.json({ error: 'Unauthorized' });
         }
         const res = await request.json();
-        console.log(res);
         const { id, key, playlist } = res;
         const dataToUpdate = {
             [key]: playlist,

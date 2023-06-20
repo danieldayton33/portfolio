@@ -4,7 +4,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { NextResponse } from 'next/server';
 import SignOut from '@/@components/SignOut';
 import PlayLists from '@/@components/Playlists';
-import { Birth, User } from '@prisma/client';
+import { Birth, Contraction, User } from '@prisma/client';
 import NextAuthSessionProvider from '@/app/providers/sessionProvider';
 import Script from 'next/script';
 import getQueryClient from '@/utils/getQueryClient';
@@ -12,15 +12,17 @@ import { dehydrate } from '@tanstack/query-core';
 import { Hydrate } from '@tanstack/react-query';
 import Link from 'next/link';
 import { ChevronLeft } from 'react-feather';
+import Contractions from '@/@components/Contractions';
 
-type BirthWithUser = Birth & {
+export type BirthWithUser = Birth & {
     user: User;
+    contractions: Contraction[];
 };
 
 async function fetchBirth(id: string): Promise<BirthWithUser | null> {
     const session = await getServerSession(authOptions);
     if (!session?.user) return null;
-    const { email, name } = session.user;
+    const { email } = session.user;
     if (!email) return null;
     return prisma.birth
         .findUnique({
@@ -29,6 +31,7 @@ async function fetchBirth(id: string): Promise<BirthWithUser | null> {
             },
             include: {
                 user: true,
+                contractions: true,
             },
         })
         .then((birth) => {
@@ -90,6 +93,10 @@ const SingleBirthPage = async ({
                                 </p>
                             </div>
                         </div>
+                        <Contractions
+                            contractions={birth.contractions}
+                            birthId={birth.id}
+                        />
                         <PlayLists />
                     </section>
                 </main>

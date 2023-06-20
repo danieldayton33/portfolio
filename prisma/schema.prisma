@@ -16,7 +16,8 @@ model User {
   name      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Births     Birth[]
+  Births    Birth[]
+  Children  Child[]
 }
 
 model Birth {
@@ -29,16 +30,36 @@ model Birth {
     date      DateTime
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-    Conctractions Contraction[]
+    contractions Contraction[]
+    Child    Child?
 }
 
 model Contraction {
     id        Int      @id @default(autoincrement())
-    date      DateTime
     length    Int
     song      String?
+    startTime DateTime
+    endTime   DateTime?
+    isRunning Boolean
+    notes     String?
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     birthId   Int
     birth     Birth    @relation(fields: [birthId], references: [id])
 }
+
+model Child {
+    id        Int      @id @default(autoincrement())
+    name      String
+    birthId   Int     @unique
+    image     String?
+    userId    Int
+    weigthLbs Int?
+    weigthOz  Int?
+    user      User     @relation(fields: [userId], references: [id])
+    birth     Birth?    @relation(fields: [birthId], references: [id])
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+

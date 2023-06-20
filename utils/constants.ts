@@ -23,7 +23,6 @@ export const TECHNOLOGIES = [
     'AWS',
     'PostgreSQL',
     'PHP',
-    'Laravel',
     'MySQL',
     'DevOps',
     'Git',
@@ -33,13 +32,14 @@ export const TECHNOLOGIES = [
 export const PROJECTS: Project[] = [
     {
         name: "Shiloh's Birthday",
-        description: 'A website for my daughter.',
+        description:
+            'A simple app to time contractions while selecting Spotify playlists for during qnd between contractions.',
         url: '/shiday',
         categories: ['Personal'],
         technologies: ['React', 'TypeScript', 'Next.js'],
         image: '/shidays-birthday.png',
         contribution:
-            'Simple App that authenticates with Spotify, allows the user to select a playlist, and time contractions. Built for my daughter.',
+            'WIP: Simple App that authenticates with Spotify, allows the user to select a playlist, and time contractions. Built for my daughter.',
         openInNewTab: false,
     },
     {
@@ -62,6 +62,24 @@ export const PROJECTS: Project[] = [
         contribution: 'Lead Developer working with a outside design team.',
     },
     {
+        name: 'Quanta Services Website',
+        description: 'A website for a Fortune 500 energy company.',
+        url: 'https://quantaservices.com',
+        categories: ['Work', 'Headless WordPress'],
+        technologies: [
+            'React',
+            'TypeScript',
+            'WordPress',
+            'GraphQL',
+            'Next.js',
+            'PHP',
+            'MySQL',
+        ],
+        image: '/quantaservices.png',
+        contribution:
+            'Lead Developer. This project was a lot of fun. We pushed on animations leveraging GSAP and React Spring.',
+    },
+    {
         name: 'Jillian Bondarchuk Website',
         description: 'A website for a fantasy writer.',
         url: 'https://bondarchuk-frontend.vercel.app/',
@@ -77,6 +95,23 @@ export const PROJECTS: Project[] = [
         image: '/jillian-bondarchuk-website.png',
         contribution:
             'Built for a friend. Site has not been fully launched yet.',
+    },
+    {
+        name: 'MCC Website',
+        description: 'A multi-lang website for a Fortune 500 label company.',
+        url: 'https://www.mcclabel.com/en',
+        categories: ['Work', 'Headless WordPress'],
+        technologies: [
+            'React',
+            'TypeScript',
+            'WordPress',
+            'GraphQL',
+            'Next.js',
+            'Express',
+        ],
+        image: '/mcc-image.png',
+        contribution:
+            'This as a migration from Drupal. Another team member at Carimus handled the migration. I build out the frontend. This project leveraged tailwind.',
     },
     {
         name: 'Carimus Website',

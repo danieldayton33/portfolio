@@ -10,6 +10,7 @@ import { dehydrate } from '@tanstack/query-core';
 import { Hydrate } from '@tanstack/react-query';
 import Births from '@/@components/Births';
 import Name from '@/@components/Name';
+import NextAuthSessionProvider from '@/app/providers/sessionProvider';
 
 export type UserWithBirths = User & {
     Births: Birth[];
@@ -60,25 +61,27 @@ const BirthsPage = async () => {
     const dehydratedState = dehydrate(queryClient);
     return (
         <Hydrate state={dehydratedState}>
-            <main>
-                <section className="bg-tertiary shadow-b-2xl px-4 lg:px-0">
-                    <div className="container mx-auto">
-                        <div className="grid grid-cols-1 gap-12 py-12">
-                            <div className="flex justify-between items-center">
-                                <Name />
-                                <SignOut />
+            <NextAuthSessionProvider>
+                <main>
+                    <section className="bg-tertiary shadow-b-2xl px-4 lg:px-0">
+                        <div className="container mx-auto">
+                            <div className="grid grid-cols-1 gap-12 py-12">
+                                <div className="flex justify-between items-center">
+                                    <Name />
+                                    <SignOut />
+                                </div>
+                                <p>
+                                    This is a simple app to play music during
+                                    contractions. Select a playlist for during
+                                    contractions and between.
+                                </p>
+                                <BirthForm />
+                                <Births />
                             </div>
-                            <p>
-                                This is a simple app to play music during
-                                contractions. Select a playlist for during
-                                contractions and between.
-                            </p>
-                            <BirthForm />
-                            <Births />
                         </div>
-                    </div>
-                </section>
-            </main>
+                    </section>
+                </main>
+            </NextAuthSessionProvider>
         </Hydrate>
     );
 };
