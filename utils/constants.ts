@@ -33,13 +33,13 @@ export const PROJECTS: Project[] = [
     {
         name: "Shiloh's Birthday",
         description:
-            'A simple app to time contractions while selecting Spotify playlists for during qnd between contractions.',
+            'A simple app to time contractions while selecting Spotify playlists for during and between contractions. The app is embedded into this site.',
         url: '/shiday',
         categories: ['Personal'],
-        technologies: ['React', 'TypeScript', 'Next.js'],
+        technologies: ['React', 'TypeScript', 'Next.js', 'PostgreSQL'],
         image: '/shidays-birthday.png',
         contribution:
-            'WIP: Simple App that authenticates with Spotify, allows the user to select a playlist, and time contractions. Built for my daughter.',
+            'WIP: Simple App that authenticates with Spotify, allows the user to select a playlist, and time contractions. Built for my daughter, Shiloh.',
         openInNewTab: false,
     },
     {

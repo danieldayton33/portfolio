@@ -62,7 +62,7 @@ const About: FunctionComponent = () => {
                     designers and developers. I&apos;ve categorized those
                     projects as &quot;Work&quot;,and indicated my role on the
                     project, and the others as &quot;Personal&quot;. As part of
-                    my role I&apos;m an engineering manager over 3 developers
+                    my role I&apos;m an engineering manager over 4 developers
                     and act as architect/lead on client projects.
                 </p>
                 <h2 className="text-4xl my-4 font-ubuntuBold banner light">
