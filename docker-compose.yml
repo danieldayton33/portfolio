@@ -1,0 +1,21 @@
+---
+
+version: "3.7"
+
+services:
+  database:
+    image: postgres:13-alpine
+    container_name: dd-portfolio-1
+    networks:
+      - backend
+    ports:
+      - "54321:5432"
+    volumes:
+      - ./storage/docker/postgis13:/var/lib/postgresql/data:cached
+    environment:
+      - POSTGRES_DB=dd_portfolio
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/data
+networks:
+  backend: {}
