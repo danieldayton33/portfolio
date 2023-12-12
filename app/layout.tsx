@@ -2,6 +2,8 @@ import './globals.css';
 import 'styles/index.scss';
 import { ubuntuNormal, ubuntuBold } from '@/utils/fonts';
 import Nav from '@components/Nav';
+import GoogleAnalytics from '@/@components/GoogleAnaylitics';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
     children,
@@ -18,8 +20,14 @@ export default function RootLayout({
             <body
                 className={`${ubuntuBold.variable} ${ubuntuNormal.variable} ${ubuntuNormal.className} `}
             >
+                {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+                    <GoogleAnalytics
+                        ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+                    />
+                ) : null}
                 <Nav />
                 {children}
+                <Analytics />
                 <footer>
                     <Nav />
                 </footer>
