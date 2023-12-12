@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth/next';
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 type HttpHandler = (request: Request) => void;
@@ -10,6 +11,17 @@ interface RouteHandlerParams {
     PUT?: HttpHandler;
     DELETE?: HttpHandler;
 }
+
+export const checkSessionForRoute = async () => {
+    // Check session for route
+    const session = await getServerSession();
+    // If no session, return 401
+    if (!session) {
+        return NextResponse.json({ error: 'Unauthorized', status: 401 });
+    }
+    // If session, return session
+    return session;
+};
 
 const RouteHandler = (handlers: RouteHandlerParams) => {
     return async (request: Request) => {
