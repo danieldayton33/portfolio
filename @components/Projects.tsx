@@ -63,7 +63,7 @@ const Projects: FunctionComponent = () => {
                         })}
                     >
                         {filteredProjects.length > 0 ? (
-                            filteredProjects.map((project, i) => (
+                            filteredProjects.map((project) => (
                                 <Card
                                     key={JSON.stringify(project)}
                                     {...project}

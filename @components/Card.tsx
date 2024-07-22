@@ -51,19 +51,19 @@ const StyledCard = styled.div`
         right: -100%;
         transition: 0.5s;
         z-index: 1;
-        &.show {
-            right: 0;
-            transition: 0.5s;
-        }
+    
     }
 
-    &:hover {
-        animation: wobble 1s ease-in-out;
+    &:hover, &:focus {
         transition: 0.25s;
         .show-details {
             opacity: 1;
             transition: 0.25s;
             transition-delay: 0.25s;
+        }
+        .details {
+            right: 0;
+            transition: 0.5s;
         }
     }
     @keyframes wobble {
@@ -92,9 +92,8 @@ const Card: FunctionComponent<Project> = ({
     contribution,
     openInNewTab = true,
 }) => {
-    const [showDetails, setShowDetails] = useState(false);
     return (
-        <StyledCard className="shadow-2xl bg-tertiary text-quinary">
+        <StyledCard className="shadow-2xl bg-tertiary text-quinary" tabIndex={0}>
             <div className="relative h-64 w-full">
                 {image && (
                     <Image
@@ -113,7 +112,7 @@ const Card: FunctionComponent<Project> = ({
             <div
                 className={classNames({
                     details: true,
-                    show: showDetails,
+                 
                 })}
             >
                 {contribution && (
@@ -172,16 +171,6 @@ const Card: FunctionComponent<Project> = ({
                         See Project
                     </Link>
                 )}
-
-                <button
-                    className="btn btn-primary show-details mt-2"
-                    onClick={() => setShowDetails(!showDetails)}
-                    title={`Show ${
-                        showDetails ? 'Less' : 'More'
-                    } Details about ${name}`}
-                >
-                    {showDetails ? 'Hide Details' : 'Show Details'}
-                </button>
             </div>
         </StyledCard>
     );
