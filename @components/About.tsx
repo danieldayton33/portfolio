@@ -26,18 +26,7 @@ const About: FunctionComponent = () => {
                 </h2>
                 <p className="mb-4">
                     I&apos;m a software engineer with a passion for building
-                    great web applications. I&apos;m currently working at{' '}
-                    <a
-                        href="https://carimus.com"
-                        target={'_blank'}
-                        rel="noreferrer"
-                        className="font-ubuntuBold text-quinary hover:text-primary"
-                    >
-                        Carimus
-                    </a>
-                    {', '} a web, app, and design agency in Raleigh, NC. This is
-                    a small portfolio site and playground for me to try out new
-                    tech.
+                    great web applications.
                 </p>
                 <p className="mb-4">
                     I transitioned into software development in 2018 after
@@ -49,21 +38,10 @@ const About: FunctionComponent = () => {
                     projects for the last few years.
                 </p>
                 <p className="mb-8">
-                    A lot of the projects on this site are part of my work at{' '}
-                    <a
-                        href="https://carimus.com"
-                        target={'_blank'}
-                        rel="noreferrer"
-                        className="font-ubuntuBold text-quinary hover:text-primary"
-                    >
-                        Carimus
-                    </a>
-                    , where I collaborate with a extremely talented team of
-                    designers and developers. I&apos;ve categorized those
+                    I&apos;ve included both work and personal projects on this site.
+                    I&apos;ve categorized work
                     projects as &quot;Work&quot;,and indicated my role on the
-                    project, and the others as &quot;Personal&quot;. As part of
-                    my role I&apos;m an engineering manager over 4 developers
-                    and act as architect/lead on client projects.
+                    project, and the others as &quot;Personal&quot;.
                 </p>
                 <h2 className="text-4xl my-4 font-ubuntuBold banner light">
                     Skills
