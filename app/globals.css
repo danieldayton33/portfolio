@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #e3170a;
-    --color-secondary: #a9e5bb;
-    --color-tertiary: #fcf6b1;
+    --color-primary: #9E2A2B;
+    --color-secondary: #F0F0F0;
+    --color-tertiary: #1B1B1B;
     --color-quaternary: #f7b32b;
     --color-quinary: #2d1e2f;
 }
@@ -17,8 +17,8 @@
     @apply shadow-xl rounded-full tracking-widest py-4 bg-quinary text-white uppercase font-ubuntuBold hover:bg-tertiary hover:text-quinary transition-all duration-75 px-12;
 }
 .btn-primary {
-    @apply bg-quinary hover:bg-secondary;
+    @apply bg-primary hover:bg-secondary;
 }
 .btn-secondary {
-    @apply bg-quaternary hover:bg-primary;
+    @apply bg-secondary hover:bg-primary text-tertiary;
 }

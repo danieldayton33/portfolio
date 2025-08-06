@@ -10,8 +10,10 @@ export const CATEGORIES = [
 
 export const TECHNOLOGIES = [
     'React',
+    'React Native',
     'TypeScript',
     'WordPress',
+    'Java',
     'GraphQL',
     'Next.js',
     'Sass',

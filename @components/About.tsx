@@ -19,29 +19,24 @@ const About: FunctionComponent = () => {
         scrollToProjects();
     };
     return (
-        <div className="flex flex-col pb-24 lg:py-24">
+        <div className="flex flex-col pb-24 lg:py-24 text-white">
             <div>
                 <h2 className="text-4xl mb-4 font-ubuntuBold banner light">
                     About
                 </h2>
                 <p className="mb-4">
-                    I&apos;m a software engineer with a passion for building
-                    great web applications.
+                    I&apos;ma full-stack software engineer who transformed a 10-year career in farming into a passion-driven path in web development. 
                 </p>
                 <p className="mb-4">
-                    I transitioned into software development in 2018 after
-                    working as a farmer for over 10 years. For many, this
-                    transition may seem pretty drastic, but I&apos;ve found a
-                    profession that keeps me engaged every day. I was focused
-                    predominately on frontend development during the first few
-                    years of my career, but have been working on full stack
-                    projects for the last few years.
+                   Since entering tech in 2018, I&apos;ve grown from front-end specialization into full ownership of architecture and delivery across the stack.
+                   </p>
+                   <p className="mb-4">
+I build performant, responsive web experiences using React, TypeScript, Next.js, Sass, GraphQL, Node.js, and Express. On the backend, I work with relational and document databases (PostgreSQL, MongoDB), containerization (Docker), CI/CD pipelines, and cloud deployments using AWS.
+
                 </p>
                 <p className="mb-8">
-                    I&apos;ve included both work and personal projects on this site.
-                    I&apos;ve categorized work
-                    projects as &quot;Work&quot;,and indicated my role on the
-                    project, and the others as &quot;Personal&quot;.
+                  Across both professional and personal projects, I focus on craftsmanship, scalability, and thoughtful design. I approach engineering with a problem-solving mindset grounded in real-world resilience — and I bring a steady focus on collaboration, quality, and iteration. I&apos;m now looking to step into leadership, help shape product direction, mentor others, and drive technical excellence.
+
                 </p>
                 <h2 className="text-4xl my-4 font-ubuntuBold banner light">
                     Skills

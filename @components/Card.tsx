@@ -108,7 +108,7 @@ const Card: FunctionComponent<Project> = ({
                 )}
             </div>
             <h2 className="font-ubuntuBold banner">{name}</h2>
-            <p>{description}</p>
+            <p className='text-white'>{description}</p>
             <div
                 className={classNames({
                     details: true,
@@ -157,7 +157,7 @@ const Card: FunctionComponent<Project> = ({
                         href={url}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn btn-primary text-center mt-2"
+                        className="btn btn-secondary text-center mt-2"
                         title={`View ${name} in a new tab`}
                     >
                         See Project
@@ -166,7 +166,7 @@ const Card: FunctionComponent<Project> = ({
                     <Link
                         href={url}
                         title={`View ${name} in a new tab`}
-                        className="btn btn-primary text-center mt-2"
+                        className="btn btn-secondary text-center mt-2"
                     >
                         See Project
                     </Link>
